@@ -37,4 +37,4 @@ The sample rate affects both perceived pitch and playback duration. The note con
 3. `_connect_speaker` generates a square wave for pitched notes. It alternates sample values `0x3F` and `0x00`; the pitch value controls the number of samples in each wave cycle. For a rest, `_silence_speaker` writes zero-valued samples for the requested duration.
 4. `_write_sample` uses the Linux `write` system call to send one byte at a time to standard output. Once the song table ends, the program exits.
 
-To write a melody, edit the note and duration constants and the `song_data` table. Keep each entry in the form `dw pitch, duration`, and define `song_end` immediately after the final entry. `template.asm` contains a short example table; `lilb.asm` contains a longer example.
+To write a melody, edit the note and duration constants and the `song_data` table. Keep each entry in the form `dw pitch, duration`, and define `song_end` immediately after the final entry. `template.asm` contains a short example table; `lilb.asm` contains a longer example by a personal favorite.
